@@ -17,5 +17,9 @@ RUN chmod +x /startup.sh
 # Set the default cron schedule pattern -> run every two hours
 ENV CRON_SCHEDULE_PATTERN="0 */2 * * *"
 
+# Write logs to external database -> do not write by default
+ENV WRITE_LOGS=0
+
+
 # run the startup script
 ENTRYPOINT ["bash", "/startup.sh"]

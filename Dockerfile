@@ -20,6 +20,8 @@ ENV CRON_SCHEDULE_PATTERN="0 */2 * * *"
 # Write logs to external database -> do not write by default
 ENV WRITE_LOGS=0
 
+# Set local timezone
+ENV TZ=Europe/Bratislava
 
 # run the startup script
 ENTRYPOINT ["bash", "/startup.sh"]
